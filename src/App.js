@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import "./App.css";
-import Boards from "./pages/boards";
+
 import Navbar from "./common/components/layout/navbar";
+import Home from "./pages/home";
+import Boards from "./pages/boards";
 import Board from "./pages/board";
+import Page404 from "./pages/page404";
+
+import "./App.css";
 
 function App() {
 	return (
@@ -13,7 +16,8 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/boards" element={<Boards />} />
-				<Route path="/boards/:board" element={<Board />} />
+				<Route path="/board/:name" element={<Board />} />
+				<Route path="*" element={<Page404 />} />
 			</Routes>
 		</Router>
 	);

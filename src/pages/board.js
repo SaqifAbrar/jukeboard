@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const audios = [
 	{ id: 1, name: "A" },
@@ -19,8 +20,10 @@ const audios = [
 ];
 
 export default function Board({ boardName }) {
+	const { name } = useParams();
 	return (
 		<div>
+			{name}
 			<h1>{boardName}</h1>
 			{audios.map((audio) => (
 				<div id={audio.id}>{audio.name}</div>
