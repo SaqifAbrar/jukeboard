@@ -10,16 +10,20 @@ const boards = [
 
 export default function Boards() {
 	return (
-		<div>
-			<button>New Board</button>
-			<button>Delete Board</button>
-			{boards.map((board) => (
-				<BoardCard
-					id={board.id}
-					name={board.name}
-					numSounds={board.numSounds}
-				/>
-			))}
+		<div className="board-container">
+			<div className="boards-option">
+				<button>New Board</button>
+				<button>Delete Board</button>
+			</div>
+			<div className="boards-list">
+				{boards.map((board) => (
+					<BoardCard
+						id={board.id}
+						name={board.name}
+						numSounds={board.numSounds}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }

@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+.card-container {
+	margin: 1vw;
+	padding: 4vw;
+	background-color: $medium-purple;
+	border-radius: 15px;
+
+	&:hover {
+		filter: brightness(85%);
+		transition: filter 0.5s;
+	}
+}

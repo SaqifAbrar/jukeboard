@@ -13,13 +13,15 @@ function App() {
 		<div className="app-container">
 			<Router>
 				<Navbar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/home" element={<Home />} />
-					<Route path="/boards" element={<Boards />} />
-					<Route path="/board/:name" element={<Board />} />
-					<Route path="*" element={<Page404 />} />
-				</Routes>
+				<div className="content-container">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/home" element={<Home />} />
+						<Route path="/boards" element={<Boards />} />
+						<Route path="/board/:name" element={<Board />} />
+						<Route path="*" element={<Page404 />} />
+					</Routes>
+				</div>
 			</Router>
 		</div>
 	);
