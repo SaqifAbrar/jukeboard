@@ -6,20 +6,22 @@ import Boards from "./pages/boards";
 import Board from "./pages/board";
 import Page404 from "./pages/page404";
 
-import "./App.css";
+import "./sass/main.scss";
 
 function App() {
 	return (
-		<Router>
-			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/boards" element={<Boards />} />
-				<Route path="/board/:name" element={<Board />} />
-				<Route path="*" element={<Page404 />} />
-			</Routes>
-		</Router>
+		<div className="app-container">
+			<Router>
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/home" element={<Home />} />
+					<Route path="/boards" element={<Boards />} />
+					<Route path="/board/:name" element={<Board />} />
+					<Route path="*" element={<Page404 />} />
+				</Routes>
+			</Router>
+		</div>
 	);
 }
 
