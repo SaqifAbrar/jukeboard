@@ -1,0 +1,22 @@
+{
+  "name": "app_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaqifAbrar/jukeboard.git"
+  },
+  "author": "Saqif Abrar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaqifAbrar/jukeboard/issues"
+  },
+  "homepage": "https://github.com/SaqifAbrar/jukeboard#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

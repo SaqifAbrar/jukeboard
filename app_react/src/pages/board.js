@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import JukeCard from "../common/components/elements/boards/jukeCard";
 
@@ -36,12 +36,21 @@ const randColor = () => {
 
 export default function Board({ boardName }) {
 	const { name } = useParams();
+	const [tunes, setTunes] = useState([]);
+
+	useEffect(() => {
+		const tunesReceived = audios;
+		console.log(tunesReceived);
+		setTunes(tunesReceived);
+	}, []);
+
 	return (
 		<div className="board-container">
+			{console.log(tunes)}
 			<h1>{name}</h1>
 			<div className="juke-grid">
-				{audios.map((audio) => (
-					<JukeCard key={audio.id} name={audio.name} colour={randColor()} />
+				{tunes.map((tunes) => (
+					<JukeCard key={tunes.id} name={tunes.name} colour={randColor()} />
 				))}
 			</div>
 		</div>

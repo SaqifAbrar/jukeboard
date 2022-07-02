@@ -1,5 +1,5 @@
+import React, { useEffect } from "react";
 import BoardCard from "../common/components/elements/boards/boardCard";
-import React from "react";
 
 const boards = [
 	{ id: 1, name: "Memes", numSounds: 15, colour: "#3B55CE" },
