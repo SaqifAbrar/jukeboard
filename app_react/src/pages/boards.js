@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import axios from "axios";
 import BoardCard from "../common/components/elements/boards/boardCard";
 
 const boards = [
@@ -9,6 +10,12 @@ const boards = [
 ];
 
 export default function Boards() {
+	useEffect(() => {
+		axios.get("/api/routes").then((res) => {
+			console.log(res.data);
+			alert(res.data);
+		});
+	}, []);
 	return (
 		<div className="board-container">
 			<div className="boards-option">
