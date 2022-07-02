@@ -1,0 +1,11 @@
+.juke-card {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	aspect-ratio: 1;
+	border-radius: 15px;
+
+	&:hover {
+		filter: brightness(90%);
+	}
+}

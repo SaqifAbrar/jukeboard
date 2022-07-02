@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import JukeCard from "../common/components/elements/boards/jukeCard";
 
 const audios = [
 	{ id: 1, name: "A" },
@@ -19,15 +20,30 @@ const audios = [
 	{ id: 15, name: "A" },
 ];
 
+const colours = [
+	"#FD7282",
+	"#FDBB63",
+	"#3B55CE",
+	"#D7B0FF",
+	"#A9FF75",
+	"#FF93EE",
+];
+
+const randColor = () => {
+	const i = Math.floor(Math.random() * colours.length);
+	return colours[i];
+};
+
 export default function Board({ boardName }) {
 	const { name } = useParams();
 	return (
-		<div>
-			{name}
-			<h1>{boardName}</h1>
-			{audios.map((audio) => (
-				<div id={audio.id}>{audio.name}</div>
-			))}
+		<div className="board-container">
+			<h1>{name}</h1>
+			<div className="juke-grid">
+				{audios.map((audio) => (
+					<JukeCard key={audio.id} name={audio.name} colour={randColor()} />
+				))}
+			</div>
 		</div>
 	);
 }

@@ -1,0 +1,11 @@
+.board-container {
+	height: 100%;
+}
+
+.juke-grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+	gap: 2.5vw;
+	justify-content: center;
+}

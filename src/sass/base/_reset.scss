@@ -1,6 +1,18 @@
+@use "../abstracts/variables" as *;
+
 html,
 body {
-	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: $raisin-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
 	margin: 0;
 	padding: 0;
 }
