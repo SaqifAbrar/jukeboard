@@ -8,7 +8,7 @@ const BoardCard = ({ name, colour }) => {
 			onClick={() => boardNavigate(`/board/${name}`)}
 			style={{ backgroundColor: `${colour}` }}
 		>
-			{name}
+			<p>{name}</p>
 		</div>
 	);
 };
