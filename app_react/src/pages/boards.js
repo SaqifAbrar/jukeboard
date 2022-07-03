@@ -9,18 +9,23 @@ const boards = [
 	{ id: 4, name: "Melodies", numSounds: 15, colour: "#FDBB63" },
 ];
 
+const colourChange = () => {
+	alert("Colour change coming soon!");
+};
+
 export default function Boards() {
 	useEffect(() => {
-		axios.get("/api/routes").then((res) => {
+		axios.get("/api/boards").then((res) => {
 			console.log(res.data);
 			alert(res.data);
 		});
 	}, []);
+
 	return (
 		<div className="board-container">
 			<div className="boards-option">
 				<button>New Board</button>
-				<button>Change Colour</button>
+				<button onClick={() => colourChange()}>Change Colour</button>
 				<button>Delete Board</button>
 			</div>
 			<div className="boards-list">

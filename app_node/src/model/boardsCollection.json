@@ -1,1 +1,4 @@
-[]
+[
+	{ "id": 1, "name": "Memes", "numTunes": 15 },
+	{ "id": 2, "name": "Notes", "numTunes": 15 }
+]
