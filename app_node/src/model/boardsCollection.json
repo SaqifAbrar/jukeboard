@@ -1,4 +1,4 @@
 [
-	{ "id": 1, "name": "Memes", "numTunes": 15 },
-	{ "id": 2, "name": "Notes", "numTunes": 15 }
+	{ "id": 1, "name": "Memes", "numSounds": 15, "colour": "#3B55CE" },
+	{ "id": 2, "name": "Notes", "numSounds": 15, "colour": "#FD7282" }
 ]

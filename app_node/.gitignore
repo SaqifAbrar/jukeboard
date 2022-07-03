@@ -1,2 +1,3 @@
 /node_modules
+/src/model/tunesStorage/uncompressed
 .env

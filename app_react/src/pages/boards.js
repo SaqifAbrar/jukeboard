@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BoardCard from "../common/components/elements/boards/boardCard";
 
-const boards = [
+const boardz = [
 	{ id: 1, name: "Memes", numSounds: 15, colour: "#3B55CE" },
 	{ id: 2, name: "Notes", numSounds: 15, colour: "#FD7282" },
 	{ id: 3, name: "Concert Sound FX", numSounds: 15, colour: "#7E6FD7" },
@@ -14,10 +14,12 @@ const colourChange = () => {
 };
 
 export default function Boards() {
+	const [boards, setBoards] = useState([]);
+
 	useEffect(() => {
 		axios.get("/api/boards").then((res) => {
 			console.log(res.data);
-			alert(res.data);
+			setBoards(res.data);
 		});
 	}, []);
 
