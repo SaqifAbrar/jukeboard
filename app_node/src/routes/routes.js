@@ -1,6 +1,8 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
+const boardRouter = require("./boardsRoutes");
 
-router.use("/boards");
-router.use("/board");
+router.use("/boards", boardRouter);
+//router.use("/board");
 
 module.exports = router;
