@@ -1,10 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const app = express();
-const router = require("./src/routes/routes");
+//const router = require("./src/routes/routes");
 
-require("dotenv").config();
-app.use(express.json());
+//require("dotenv").config();
+//app.use(express.json());
 
 // location routes
 //app.use("/api", router);
