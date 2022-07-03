@@ -1,5 +1,6 @@
 .juke-card {
 	display: grid;
+	padding: 3vw;
 	align-items: center;
 	justify-items: center;
 	aspect-ratio: 1;
@@ -7,5 +8,10 @@
 
 	&:hover {
 		filter: brightness(90%);
+	}
+
+	& > p {
+		text-align: center;
+		text-overflow: ellipsis;
 	}
 }

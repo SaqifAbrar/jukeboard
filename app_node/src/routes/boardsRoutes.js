@@ -1,4 +1,6 @@
 const router = require("express").Router();
+var http = require("http"),
+	ms = require("mediaserver");
 const boardsCollection = require("../model/boardsCollection.json");
 
 router.get("/", (req, res) => {
@@ -10,6 +12,9 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
+	if (res.query) {
+		ms.pipe(req, res, res.query.fileName);
+	}
 	res.send({ message: "getting jukeboard" });
 });
 
