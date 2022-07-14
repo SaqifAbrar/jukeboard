@@ -1,19 +1,29 @@
 const router = require("express").Router();
-var http = require("http");
-var ms = require("mediaserver");
-const boardsCollection = require("../model/boardsCollection.json");
+const fs = require("fs");
+//var ms = require("mediaserver");
+var boardsCollection = require("../model/boardsCollection.json");
 
 router.get("/", (req, res) => {
 	res.send(boardsCollection);
 });
 
 router.post("/", (req, res) => {
-	res.send({ message: "created new board" });
+	const lastId = boardsCollection.at(-1).id + 1;
+	const newBoard = {
+		id: lastId,
+		name: "test",
+		numSounds: 0,
+		colour: "#000000",
+	};
+	boardsCollection.push(newBoard);
+	const boardsString = JSON.stringify(boardsCollection);
+	fs.writeFileSync("src/model/boardsCollection.json", boardsString);
+	res.send(boardsCollection);
 });
 
 router.get("/:id", (req, res) => {
 	if (res.query) {
-		ms.pipe(req, res, res.query.fileName);
+		//ms.pipe(req, res, res.query.fileName);
 	}
 	res.send({ message: "getting jukeboard" });
 });

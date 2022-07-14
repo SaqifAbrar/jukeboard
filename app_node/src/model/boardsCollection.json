@@ -1,4 +1,1 @@
-[
-	{ "id": 1, "name": "Memes", "numSounds": 15, "colour": "#3B55CE" },
-	{ "id": 2, "name": "Notes", "numSounds": 15, "colour": "#FD7282" }
-]
+[{"id":1,"name":"Memes","numSounds":15,"colour":"#3B55CE"},{"id":2,"name":"Notes","numSounds":15,"colour":"#FD7282"},{"id":3,"name":"test","numSounds":0,"colour":"#000000"},{"id":4,"name":"test","numSounds":0,"colour":"#000000"},{"id":5,"name":"test","numSounds":0,"colour":"#000000"},{"id":6,"name":"test","numSounds":0,"colour":"#000000"},{"id":7,"name":"test","numSounds":0,"colour":"#000000"},{"id":8,"name":"test","numSounds":0,"colour":"#000000"},{"id":9,"name":"test","numSounds":0,"colour":"#000000"}]
