@@ -38,3 +38,9 @@
 
 - [DevPost](https://devpost.com/software/jukeboard)
 - [Figma](https://www.figma.com/file/tCvDx3mID5rdH9qD62RsOd/JukeBoard?node-id=0%3A1)
+
+---
+
+Post hackathon updates!
+
+[ ] Adding the CRUD functionality!

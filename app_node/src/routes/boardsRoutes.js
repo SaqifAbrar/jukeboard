@@ -1,6 +1,6 @@
 const router = require("express").Router();
-var http = require("http"),
-	ms = require("mediaserver");
+var http = require("http");
+var ms = require("mediaserver");
 const boardsCollection = require("../model/boardsCollection.json");
 
 router.get("/", (req, res) => {
